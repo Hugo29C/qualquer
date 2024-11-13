@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('galaxia.jpg'); /* Caminho relativo para a imagem */
+    background-size: cover; /* Ajusta o tamanho para cobrir a tela inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+}
+
+.calculadora {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente transparente */
+    border: 3px solid green; /* Define a borda verde com 3px de espessura */
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    font-size: 24px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button:active {
+    background-color: #d0d0d0;
+}
+
+button:nth-child(4n) {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+button:nth-child(4n):hover {
+    background-color: #e08000;
+}
+
+/* Estilo especial para o botão "Clear"*/
+button.clear-button {
+    background-color: #e74c3c;  /* Cor vermelha */
+    color: white;  /* Cor do texto em branco */
+}
+
+button.clear-button:hover {
+    background-color: #c0392b;  /* Cor um pouco mais escura para o efeito de hover */
+}
+
+button.clear-button:active {
+    background-color: #e74c3c;  /* Mantém a cor quando o botão for pressionado */
+}
